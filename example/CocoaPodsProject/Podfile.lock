@@ -1,0 +1,20 @@
+PODS:
+  - ObjectiveRichFlyer (1.1.9)
+  - ObjectiveRichFlyerEvent (1.0.7)
+
+DEPENDENCIES:
+  - ObjectiveRichFlyer (= 1.1.9)
+  - ObjectiveRichFlyerEvent (= 1.0.7)
+
+SPEC REPOS:
+  https://github.com/INFOCITY/richflyer-specs.git:
+    - ObjectiveRichFlyer
+    - ObjectiveRichFlyerEvent
+
+SPEC CHECKSUMS:
+  ObjectiveRichFlyer: 4bff0178ed9477537074b94e4036b5a998d2ac40
+  ObjectiveRichFlyerEvent: 434a0fa23c426bc520cc6101b7818eff9580a676
+
+PODFILE CHECKSUM: 33aec7b3b6844e3c780ead187564c44a0d904ab9
+
+COCOAPODS: 1.7.2
