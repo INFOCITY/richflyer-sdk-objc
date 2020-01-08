@@ -1,9 +1,9 @@
 PODS:
-  - ObjectiveRichFlyer (1.1.9)
+  - ObjectiveRichFlyer (1.1.10)
   - ObjectiveRichFlyerEvent (1.0.7)
 
 DEPENDENCIES:
-  - ObjectiveRichFlyer (= 1.1.9)
+  - ObjectiveRichFlyer (= 1.1.10)
   - ObjectiveRichFlyerEvent (= 1.0.7)
 
 SPEC REPOS:
@@ -12,9 +12,9 @@ SPEC REPOS:
     - ObjectiveRichFlyerEvent
 
 SPEC CHECKSUMS:
-  ObjectiveRichFlyer: 4bff0178ed9477537074b94e4036b5a998d2ac40
-  ObjectiveRichFlyerEvent: 434a0fa23c426bc520cc6101b7818eff9580a676
+  ObjectiveRichFlyer: 11037750f9e6c6eb2065919b6242cc49131559ee
+  ObjectiveRichFlyerEvent: 0ac919ef5b320f27194d6306d276f464429687f0
 
-PODFILE CHECKSUM: 33aec7b3b6844e3c780ead187564c44a0d904ab9
+PODFILE CHECKSUM: b0a33d8aa6babf41120747ee64e97e2add4460fb
 
-COCOAPODS: 1.7.2
+COCOAPODS: 1.8.4
