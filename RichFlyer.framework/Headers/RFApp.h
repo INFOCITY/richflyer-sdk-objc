@@ -26,7 +26,7 @@ typedef NS_OPTIONS(NSUInteger, RFAuthorizationOptions) {
 
 @interface RFApp : NSObject
 
-#ifdef STAGING
+#if STAGING || SANDBOX
 @property (class, assign) BOOL useProductionAPI;
 #endif
 
