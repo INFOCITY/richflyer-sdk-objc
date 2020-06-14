@@ -108,7 +108,8 @@
 }
 
 - (void)registerSegment {
-	[RFApp registSegments:[_model getDictionary] completion:^(BOOL result) {
+
+	[RFApp registSegments:[_model getDictionary] completion:^(RFResult* result) {
     dispatch_async(dispatch_get_main_queue(), ^{
       NSString* message = @"";
       if (result) {

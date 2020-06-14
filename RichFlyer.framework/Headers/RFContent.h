@@ -13,10 +13,10 @@
 NS_ASSUME_NONNULL_BEGIN
 
 typedef NS_ENUM(NSUInteger, RFContentType) {
-	RFContentTypeText,		//テキストのみ
-	RFContentTypeImage,   //静止画像
-	RFContentTypeGif,     //GIF画像
-	RFContentTypeMovie    //動画
+	RFContentTypeText,	//テキストのみ
+	RFContentTypeImage, //静止画像
+	RFContentTypeGif,   //GIF画像
+	RFContentTypeMovie  //動画
 } NS_ENUM_AVAILABLE_IOS(9_0);
 
 @interface RFContent : NSObject
@@ -33,6 +33,10 @@ typedef NS_ENUM(NSUInteger, RFContentType) {
 
 - (id)initWithUNNotificationContent:(nonnull UNNotificationContent*)content receivedDate:(nullable NSDate*)receivedDate;
 - (nullable UNNotificationContent*)convertToUNNotificationContent;
+
+- (BOOL)hasImage;
+- (BOOL)hasGif;
+- (BOOL)hasMovie;
 
 @end
 
