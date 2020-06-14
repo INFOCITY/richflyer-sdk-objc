@@ -24,6 +24,23 @@ typedef NS_OPTIONS(NSUInteger, RFAuthorizationOptions) {
 	RFAuthorizationOptionCarPlay = (1 << 3),
 };
 
+typedef NS_OPTIONS(NSUInteger, RFLaunchModes) {
+	RFLaunchModeNone    = 0,
+	RFLaunchModeText   = (1 << 0),	//テキストのみ
+	RFLaunchModeImage  = (1 << 1), //静止画像
+	RFLaunchModeGif    = (1 << 2),   //GIF画像
+	RFLaunchModeMovie  = (1 << 3)  //動画
+};
+
+@interface RFResult : NSObject
+
+@property (readonly) BOOL result;
+@property (readonly, nonatomic, nullable) NSString* message;
+@property (readonly) NSInteger code;
+
+- (nonnull id)initWithResult:(BOOL)result message:(nullable NSString*)message code:(NSInteger)code;
+@end
+
 @interface RFApp : NSObject
 
 #if STAGING || SANDBOX
@@ -35,7 +52,8 @@ typedef NS_OPTIONS(NSUInteger, RFAuthorizationOptions) {
 + (void)setServiceKey:(nonnull NSString*)serviceKey appGroupId:(nonnull NSString*)appGroupId sandbox:(BOOL)sandbox;
 + (nullable NSString*)serviceKey;
 
-+ (void)registDevice:(nonnull NSData*)deviceToken;
++ (void)registDevice:(nonnull NSData*)deviceToken __attribute__((deprecated("Use registDevice:completion: instead")));
++ (void)registDevice:(nonnull NSData*)deviceToken completion:(nullable void(^)(RFResult* _Nonnull result))completion;
 
 + (void)setBadgeNumber:(nonnull UIApplication*)application badge:(int)badge;
 + (void)resetBadgeNumber:(nonnull UIApplication*)application;
@@ -49,12 +67,14 @@ typedef NS_OPTIONS(NSUInteger, RFAuthorizationOptions) {
 
 + (void)didReceiveNotification:(nonnull UNNotificationResponse*)response handler: (nullable void(^)(RFAction* _Nullable action,  NSString* _Nullable extendedProperty))handler;
 
-+ (void)registSegments:(nonnull NSDictionary<NSString*, NSString*>*)segments completion:(nullable void (^)(BOOL result))completion;
++ (void)registSegments:(nonnull NSDictionary<NSString*, NSString*>*)segments completion:(nullable void (^)(RFResult* _Nonnull result))completion;
 
 + (nullable NSDictionary<NSString*, NSString*>*)getSegments;
 
 + (nullable NSArray<RFContent*>*)getReceivedData;
 
 + (nullable RFContent*)getLatestReceivedData;
+
++ (void)setLaunchMode:(RFLaunchModes)modes;
 
 @end

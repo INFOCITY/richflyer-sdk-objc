@@ -68,8 +68,14 @@
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
 {
 	//サーバにデバイスを登録
-	[RFApp registDevice:deviceToken];
-	
+    [RFApp registDevice:deviceToken completion:^(RFResult* result){
+      if (result.result) {
+        NSLog(@"デバイス登録に成功");
+      } else {
+        NSLog(@"デバイス登録に失敗(%@:%ld)", result.message, (long)result.code);
+      }
+    }];
+
 #if DEBUG
 	NSLog(@"token: %@", [[deviceToken description] stringByReplacingOccurrencesOfString:@" " withString:@""]);
 	[[NSUserDefaults standardUserDefaults] setObject:deviceToken forKey:@"deviceToken"];
@@ -113,6 +119,22 @@
 	//Foregroundの際に通知が表示されなくなる
 	UNNotificationPresentationOptions options = UNNotificationPresentationOptionAlert|UNNotificationPresentationOptionBadge|UNNotificationPresentationOptionSound;
 	[RFApp willPresentNotification:options completionHandler:completionHandler];
+}
+
+- (void)dismissedContentDisplay:(RFAction *)action content:(RFContent*)content
+{
+  NSNotificationCenter* nc = NSNotificationCenter.defaultCenter;
+  
+  NSMutableDictionary* param = [NSMutableDictionary dictionary];
+  [param setObject:content.notificationId forKey:@"notificationId"];
+  
+  if (action) {
+    [param setObject:[action getTitle] forKey:@"title"];
+    [param setObject:[action getType] forKey:@"actionType"];
+    [param setObject:[action getValue] forKey:@"actionValue"];
+  }
+  
+  [nc postNotificationName:@"openNotification" object:param];
 }
 
 @end
