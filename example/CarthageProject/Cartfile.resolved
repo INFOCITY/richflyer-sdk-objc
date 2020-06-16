@@ -1,2 +1,2 @@
-github "INFOCITY/richflyer-sdk-event-objc" "1.1.10"
-github "INFOCITY/richflyer-sdk-objc" "1.0.7"
+github "INFOCITY/richflyer-event-sdk-objc" "1.0.8"
+github "INFOCITY/richflyer-sdk-objc" "1.2.3"

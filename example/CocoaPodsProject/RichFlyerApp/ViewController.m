@@ -108,11 +108,10 @@
 }
 
 - (void)registerSegment {
-
 	[RFApp registSegments:[_model getDictionary] completion:^(RFResult* result) {
     dispatch_async(dispatch_get_main_queue(), ^{
       NSString* message = @"";
-      if (result) {
+      if (result.result) {
         message = [[self->_model getValue] stringByAppendingString:@"でSegmentを登録しました。"];
       } else {
         message = @"Segmentを登録できませんでした。";
