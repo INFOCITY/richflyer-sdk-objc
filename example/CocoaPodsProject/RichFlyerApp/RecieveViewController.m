@@ -47,7 +47,7 @@
   [rfDisplay present:self completeHandler:^(RFAction* action) {
     
     if ([action.getType isEqualToString:@"url"]) {
-      [[UIApplication sharedApplication] openURL:[NSURL URLWithString:action.getValue]];
+       [[UIApplication sharedApplication] openURL:[NSURL URLWithString:action.getValue] options:@{} completionHandler:nil];
     }
     [rfDisplay dismiss];
   }];
