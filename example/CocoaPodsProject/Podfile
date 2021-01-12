@@ -8,8 +8,8 @@ target 'RichFlyerApp' do
   # use_frameworks!
 
   # Pods for RichFlyerApp
-  pod 'ObjectiveRichFlyer', '1.2.3'
-  pod 'ObjectiveRichFlyerEvent', '1.0.8'
+  pod 'ObjectiveRichFlyer', '1.2.4'
+  pod 'ObjectiveRichFlyerEvent', '1.0.9'
   
   target 'NotificationContent' do
     inherit! :search_paths
