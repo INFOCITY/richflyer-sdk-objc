@@ -26,6 +26,7 @@ typedef NS_ENUM(NSUInteger, RFContentType) {
 @property (nonatomic, readonly) NSString* notificationId;
 @property (nonatomic, readonly) NSURL* imagePath;
 @property (nonatomic, readonly) NSDate* receivedDate;
+@property (nonatomic, readonly) NSDate* notificationDate;
 
 @property (nonatomic, readonly) NSArray<RFAction*>* actionButtons;
 
