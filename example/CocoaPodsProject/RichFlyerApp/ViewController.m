@@ -5,7 +5,6 @@
 //  Copyright © 2019年 INFOCITY,Inc. All rights reserved.
 //
 
-#import <RichFlyerEvent/RichFlyerEvent.h>
 #import <RichFlyer/RichFlyer.h>
 #import "Model.h"
 #import "InputParameterView.h"
