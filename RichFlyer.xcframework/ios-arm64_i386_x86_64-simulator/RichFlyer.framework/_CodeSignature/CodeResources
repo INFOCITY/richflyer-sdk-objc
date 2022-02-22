@@ -10,7 +10,7 @@
 		</data>
 		<key>Base.lproj/Localizable.strings</key>
 		<data>
-		LpLOhhHBgWvmcp6iBJw4XjyFU8E=
+		zw2yHFkmDC3/KHO42I7F0zCz5Rc=
 		</data>
 		<key>Headers/RFAction.h</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		CskDejxqQXiZ5M13faZWpaWAl9M=
+		QCnpJdBya/3P5ZBhx40PykknV4c=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -64,7 +64,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			LpLOhhHBgWvmcp6iBJw4XjyFU8E=
+			zw2yHFkmDC3/KHO42I7F0zCz5Rc=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -73,7 +73,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			+XQaw7dpyh28jhCJ/mCYbRoa7XI=
+			jwghs0NtwfnMhRWTLguekEMgYYQ=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -96,11 +96,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			LpLOhhHBgWvmcp6iBJw4XjyFU8E=
+			zw2yHFkmDC3/KHO42I7F0zCz5Rc=
 			</data>
 			<key>hash2</key>
 			<data>
-			2dLBB3kgqrLRW/klAwusfU2N7AgqQdw0tF515QRRVIM=
+			j/NKXeceCdovCwNSdMql3OMZKSLzst7aAGDHISSYfVE=
 			</data>
 		</dict>
 		<key>Headers/RFAction.h</key>
@@ -228,11 +228,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			LpLOhhHBgWvmcp6iBJw4XjyFU8E=
+			zw2yHFkmDC3/KHO42I7F0zCz5Rc=
 			</data>
 			<key>hash2</key>
 			<data>
-			2dLBB3kgqrLRW/klAwusfU2N7AgqQdw0tF515QRRVIM=
+			j/NKXeceCdovCwNSdMql3OMZKSLzst7aAGDHISSYfVE=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -241,11 +241,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			+XQaw7dpyh28jhCJ/mCYbRoa7XI=
+			jwghs0NtwfnMhRWTLguekEMgYYQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			45miX7X9fn4SFwod4cqwrQLp70nj+PSqX+Q1zz/6Y3E=
+			f7mgGeaGRih69gb7jTK8F9bvkDUwcdU6pIbkSkMS3ys=
 			</data>
 			<key>optional</key>
 			<true/>
