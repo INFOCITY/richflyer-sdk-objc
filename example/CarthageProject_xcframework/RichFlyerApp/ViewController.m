@@ -111,10 +111,10 @@
 	[RFApp registSegments:[_model getDictionary] completion:^(RFResult* result) {
     dispatch_async(dispatch_get_main_queue(), ^{
       NSString* message = @"";
-      if (result) {
+      if (result.result) {
         message = [[self->_model getValue] stringByAppendingString:@"でSegmentを登録しました。"];
       } else {
-        message = @"Segmentを登録できませんでした。";
+        message = [NSString stringWithFormat:@"Segmentを登録できませんでした。\n%@(%ld)", result.message, result.code];
       }
       UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Segmentの登録" message:message preferredStyle:UIAlertControllerStyleAlert];
       UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:NULL];
