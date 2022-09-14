@@ -26,6 +26,7 @@
 
     [RFNotificationService configureRFNotification:self.bestAttemptContent
                                         appGroupId:groupId
+                                   displayNavigate:YES
                                    completeHandler:^(UNMutableNotificationContent *content) {
                                      self.bestAttemptContent = content;
                                      self.contentHandler(self.bestAttemptContent);
