@@ -77,4 +77,6 @@ typedef NS_OPTIONS(NSUInteger, RFLaunchModes) {
 
 + (void)setLaunchMode:(RFLaunchModes)modes;
 
++ (BOOL)isRichFlyerNotification:(nonnull NSDictionary*)userInfo;
+
 @end

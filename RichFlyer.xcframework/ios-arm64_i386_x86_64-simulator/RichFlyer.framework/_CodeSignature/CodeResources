@@ -22,7 +22,7 @@
 		</data>
 		<key>Headers/RFApp.h</key>
 		<data>
-		bB/ADlAYdm+w0lOMPZyh/0YEulA=
+		fyhK9BXoWIg3lE4spsmUz96mBhk=
 		</data>
 		<key>Headers/RFContent.h</key>
 		<data>
@@ -46,7 +46,7 @@
 		</data>
 		<key>Headers/RFNotificationService.h</key>
 		<data>
-		FAaZ9dBcJawUMQjIcH4RyeGuaz0=
+		+FFsYc0ZSHwLoEm1s60l088g6iU=
 		</data>
 		<key>Headers/RichFlyer.h</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		OKUkf+S1v9aVHzB1ryoaGjSRzRk=
+		UoTXUOuJkgCfjoZT3UciKgP7ho8=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -129,11 +129,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			bB/ADlAYdm+w0lOMPZyh/0YEulA=
+			fyhK9BXoWIg3lE4spsmUz96mBhk=
 			</data>
 			<key>hash2</key>
 			<data>
-			9NkQCT5y43cEphmWhlz+q6jhP5eeHZB68lFvUHskAxM=
+			qkKRLmd8AMs7MoTckradyQv5MplkLSgQd8lxeDguhTs=
 			</data>
 		</dict>
 		<key>Headers/RFContent.h</key>
@@ -195,11 +195,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			FAaZ9dBcJawUMQjIcH4RyeGuaz0=
+			+FFsYc0ZSHwLoEm1s60l088g6iU=
 			</data>
 			<key>hash2</key>
 			<data>
-			N+bcdJlXWI+m4perJoKzZHsklCZD0H+xIQAsd0QWKjI=
+			AngRvwUO9IRXltut3YN3EEIRQE3Q0zT9ZQ916muPrT4=
 			</data>
 		</dict>
 		<key>Headers/RichFlyer.h</key>
