@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		zDGC7NGp4ikUlCgWIyaqeu4jezQ=
+		xpKqN1xFV63qkZ4gXoSFaNzm84c=
 		</data>
 		<key>Base.lproj/Localizable.strings</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		UoTXUOuJkgCfjoZT3UciKgP7ho8=
+		J2r+CqyCGrCPlcQK4V93mnMNDS4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -85,11 +85,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			zDGC7NGp4ikUlCgWIyaqeu4jezQ=
+			xpKqN1xFV63qkZ4gXoSFaNzm84c=
 			</data>
 			<key>hash2</key>
 			<data>
-			ht2+cXpBwhfqsOqQxL1WV9PW0DJkiqAGKxnWVrQpI2U=
+			4xk3EGJ6X23NJ9I7TP5q4zzT11G/f5o7Yg5ZAXLQVhE=
 			</data>
 		</dict>
 		<key>Base.lproj/Localizable.strings</key>
