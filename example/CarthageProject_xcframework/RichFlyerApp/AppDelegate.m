@@ -57,8 +57,8 @@
   NSData* deviceToken = [[NSUserDefaults standardUserDefaults] objectForKey:@"deviceToken"];
 	if (deviceToken) {
 		NSLog(@"token: %@", [[deviceToken description] stringByReplacingOccurrencesOfString:@" " withString:@""]);
-#endif
 	}
+#endif
 }
 
 
