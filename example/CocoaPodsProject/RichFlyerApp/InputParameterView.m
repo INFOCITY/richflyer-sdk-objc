@@ -60,7 +60,11 @@
 	[toolBar setItems:@[doneItem]];
 	
 	_textField = [[UITextField alloc] init];
-	_textField.text = _list[0];
+    if ([_list[0] isKindOfClass:[NSString class]] ) {
+        _textField.text = _list[0];
+    } else if ([_list[0] isKindOfClass:[NSNumber class]]) {
+        _textField.text = [_list[0] stringValue];
+    }
 	_textField.textColor = [UIColor whiteColor];
 	_textField.textAlignment = NSTextAlignmentCenter;
 	_textField.inputView = _pickerView;
@@ -95,11 +99,21 @@
 }
 
 - (nullable NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
-	return _list[row];
+
+    if ([_list[row] isKindOfClass:[NSString class]] ) {
+        return _list[row];
+    } else if ([_list[row] isKindOfClass:[NSNumber class]]) {
+        return [_list[row] stringValue];
+    }
+    return @"";
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
-	_textField.text = _list[row];
+    if ([_list[row] isKindOfClass:[NSString class]] ) {
+        _textField.text = _list[row];
+    } else if ([_list[row] isKindOfClass:[NSNumber class]]) {
+        _textField.text = [_list[row] stringValue];
+    }
 	[_model setValue:_type value:_list[row]];
 }
 

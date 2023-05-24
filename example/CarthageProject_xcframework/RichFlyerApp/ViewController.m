@@ -108,19 +108,47 @@
 
 - (void)registerSegment {
 
-	[RFApp registSegments:[_model getDictionary] completion:^(RFResult* result) {
-    dispatch_async(dispatch_get_main_queue(), ^{
-      NSString* message = @"";
-      if (result.result) {
-        message = [[self->_model getValue] stringByAppendingString:@"でSegmentを登録しました。"];
-      } else {
-        message = [NSString stringWithFormat:@"Segmentを登録できませんでした。\n%@(%ld)", result.message, result.code];
-      }
-      UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Segmentの登録" message:message preferredStyle:UIAlertControllerStyleAlert];
-      UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:NULL];
-      [alert addAction:defaultAction];
-      [self presentViewController:alert animated:YES completion:NULL];
-   });
+    NSDictionary* segments = [_model getDictionary];
+    NSMutableDictionary<NSString*, NSString*>* stringSegments = [NSMutableDictionary dictionary];
+    NSMutableDictionary<NSString*, NSNumber*>* intSegments = [NSMutableDictionary dictionary];
+    NSMutableDictionary<NSString*, NSNumber*>* boolSegments = [NSMutableDictionary dictionary];
+    NSMutableDictionary<NSString*, NSDate*>* dateSegments = [NSMutableDictionary dictionary];
+
+    for (NSString* key in [segments allKeys]) {
+        id value = [segments objectForKey:key];
+        
+        if ([value isKindOfClass:[NSString class]]) {
+            if ([value isEqualToString:@"YES"]) {
+                [boolSegments setObject:[NSNumber numberWithBool:YES] forKey:key];
+            } else if ([value isEqualToString:@"NO"]) {
+                [boolSegments setObject:[NSNumber numberWithBool:NO] forKey:key];
+            } else {
+                [stringSegments setObject:value forKey:key];
+            }
+            continue;
+        }
+        
+        if ([value isKindOfClass:[NSNumber class]]) {
+            [intSegments setObject:value forKey:key];
+            continue;
+        }
+    }
+    [dateSegments setObject:[NSDate new] forKey:@"registeredDate"];
+
+    [RFApp registSegments:stringSegments intSegments:intSegments
+             boolSegments:boolSegments dateSegments:dateSegments completion:^(RFResult * _Nonnull result) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+          NSString* message = @"";
+          if (result.result) {
+            message = [[self->_model getValue] stringByAppendingString:@"でSegmentを登録しました。"];
+          } else {
+            message = [NSString stringWithFormat:@"Segmentを登録できませんでした。(%ld)", result.code];
+          }
+          UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Segmentの登録" message:message preferredStyle:UIAlertControllerStyleAlert];
+          UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:NULL];
+          [alert addAction:defaultAction];
+          [self presentViewController:alert animated:YES completion:NULL];
+       });
 	}];
        
 }

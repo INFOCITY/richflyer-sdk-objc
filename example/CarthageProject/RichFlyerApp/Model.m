@@ -22,14 +22,14 @@
 		for (NSNumber* num in [self getSegmentParameters]) {
 			SegmentParameter param = [num intValue];
 			NSString* paramStr = [self getSegmentParameterName:param];
-			NSString* value = [self getSegmentParameterValue:param][0];
+			NSObject* value = [self getSegmentParameterValue:param][0];
 			[_dictionary setValue:value forKey:paramStr];
 		}
 	}
 	return self;
 }
 
-- (void)setValue:(SegmentParameter)key value:(NSString*)value {
+- (void)setValue:(SegmentParameter)key value:(NSObject*)value {
 	NSString* keyStr = [self getSegmentParameterName:key];
 	_dictionary[keyStr] = value;
 }
@@ -39,11 +39,17 @@
 	for (NSNumber* num in [self getSegmentParameters]) {
 		SegmentParameter param = [num intValue];
 		NSString* paramStr = [self getSegmentParameterName:param];
-		NSString* value = _dictionary[paramStr];
-		if (value == NULL) {
-			value = @"";
+        NSString* strValue;
+        NSObject* value = _dictionary[paramStr];
+        if ([value isKindOfClass:[NSString class]]) {
+            strValue = (NSString*)value;
+        } else if ([value isKindOfClass:[NSNumber class]]) {
+            strValue = [(NSNumber*)value stringValue];
+        }
+		if (strValue == NULL) {
+            strValue = @"";
 		}
-		str = [[[[str stringByAppendingString:paramStr] stringByAppendingString:@" : "] stringByAppendingString:value] stringByAppendingString:@"\n"];
+		str = [[[[str stringByAppendingString:paramStr] stringByAppendingString:@" : "] stringByAppendingString:strValue] stringByAppendingString:@"\n"];
 	}
 	return str;
 }
@@ -57,8 +63,8 @@
 	NSMutableArray *segmentParameters = [NSMutableArray array];
 	[segmentParameters addObject:[NSNumber numberWithInt:SegmentParameterGenre]];
 	[segmentParameters addObject:[NSNumber numberWithInt:SegmentParameterDay]];
-	[segmentParameters addObject:[NSNumber numberWithInt:SegmentParameterLaunchCount]];
-	[segmentParameters addObject:[NSNumber numberWithInt:SegmentParameterDayTime]];
+	[segmentParameters addObject:[NSNumber numberWithInt:SegmentParameterAge]];
+	[segmentParameters addObject:[NSNumber numberWithInt:SegmentParameterRegistered]];
 	return segmentParameters;
 	
 }
@@ -69,10 +75,10 @@
 			return @[@"comic", @"magazine", @"novel"];
 		case SegmentParameterDay:
 			return @[@"月", @"火", @"水", @"木", @"金", @"土", @"日"];
-		case SegmentParameterLaunchCount:
-			return @[@"0-100", @"101-1000", @"1001-5000", @"5001-10000"];
-		case SegmentParameterDayTime:
-			return @[@"朝", @"昼", @"晩", @"深夜"];
+		case SegmentParameterAge:
+			return @[@0,@10,@20,@30,@40,@50,@60,@70,@80,@90,@100];
+		case SegmentParameterRegistered:
+			return @[@"YES", @"NO"];
 	}
 }
 
@@ -82,10 +88,10 @@
 			return @"genre";
 		case SegmentParameterDay:
 			return @"day";
-		case SegmentParameterLaunchCount:
-			return @"launchCount";
-		case SegmentParameterDayTime:
-			return @"dayTime";
+		case SegmentParameterAge:
+			return @"age";
+		case SegmentParameterRegistered:
+			return @"registered";
 	}
 }
 

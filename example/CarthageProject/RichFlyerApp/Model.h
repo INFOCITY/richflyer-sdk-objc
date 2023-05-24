@@ -10,8 +10,8 @@
 typedef enum SegmentParameter {
 	SegmentParameterGenre,
 	SegmentParameterDay,
-	SegmentParameterLaunchCount,
-	SegmentParameterDayTime	
+	SegmentParameterAge,
+	SegmentParameterRegistered
 } SegmentParameter;
 
 typedef enum EventParameter {
