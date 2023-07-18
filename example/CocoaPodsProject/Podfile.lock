@@ -1,16 +1,16 @@
 PODS:
-  - ObjectiveRichFlyer (1.4.0)
+  - ObjectiveRichFlyer (1.4.6)
 
 DEPENDENCIES:
-  - ObjectiveRichFlyer (= 1.4.0)
+  - ObjectiveRichFlyer (= 1.4.6)
 
 SPEC REPOS:
   https://github.com/INFOCITY/richflyer-specs.git:
     - ObjectiveRichFlyer
 
 SPEC CHECKSUMS:
-  ObjectiveRichFlyer: 102dd6a5961ddf5c9bd8e551cf80774a49552a21
+  ObjectiveRichFlyer: 8d434c0b588454a91cdb40a6cf8f5052c75701cf
 
-PODFILE CHECKSUM: 38843abcfae70445e360a11e41c3c1614da4a8d5
+PODFILE CHECKSUM: fe987eb1427c956c9e480acb9691aa86b90c5995
 
 COCOAPODS: 1.11.3
