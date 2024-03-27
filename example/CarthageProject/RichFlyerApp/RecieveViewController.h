@@ -13,6 +13,8 @@ typedef enum {
     SendMediaTypeMovie
 }SendMediaType;
 
-@interface RecieveViewController : UIViewController
+@interface RecieveViewController : UIViewController<UITableViewDataSource, UITableViewDelegate> {
+  
+}
 
 @end

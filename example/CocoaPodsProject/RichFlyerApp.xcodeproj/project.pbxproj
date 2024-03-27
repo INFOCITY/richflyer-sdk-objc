@@ -3,12 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		569DCC2630C482D36D2B3024 /* libPods-NotificationService.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D8937C51A53A383F3508BE5B /* libPods-NotificationService.a */; };
 		BC169A930C727544058A6DDF /* libPods-NotificationContent.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19B03607E78A46AF65BBB45B /* libPods-NotificationContent.a */; };
+		C24C1CEE2B16EC5E0039DE16 /* EventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C24C1CEB2B16EC5D0039DE16 /* EventViewController.m */; };
+		C24C1CEF2B16EC5E0039DE16 /* RecievedNotificationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C24C1CED2B16EC5D0039DE16 /* RecievedNotificationCell.m */; };
 		C25E87D322165DDD00399093 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C25E87D222165DDD00399093 /* AppDelegate.m */; };
 		C25E87D622165DDD00399093 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C25E87D522165DDD00399093 /* ViewController.m */; };
 		C25E87D922165DDD00399093 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C25E87D722165DDD00399093 /* Main.storyboard */; };
@@ -17,7 +19,6 @@
 		C281C9E9221C1547003362FE /* InputParameterView.m in Sources */ = {isa = PBXBuildFile; fileRef = C281C9DA221C1546003362FE /* InputParameterView.m */; };
 		C281C9EE221C1547003362FE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C281C9E5221C1547003362FE /* Images.xcassets */; };
 		C281C9EF221C1547003362FE /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = C281C9E8221C1547003362FE /* Model.m */; };
-		C298C59F221EB48400E1A906 /* RichFlyer.plist in Resources */ = {isa = PBXBuildFile; fileRef = C298C59E221EB48400E1A906 /* RichFlyer.plist */; };
 		C298C5A6221EB51C00E1A906 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C298C5A5221EB51C00E1A906 /* UserNotifications.framework */; };
 		C298C5A8221EB51C00E1A906 /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C298C5A7221EB51C00E1A906 /* UserNotificationsUI.framework */; };
 		C298C5AF221EB51C00E1A906 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C298C5AD221EB51C00E1A906 /* MainInterface.storyboard */; };
@@ -68,6 +69,10 @@
 		49B0C6A5ADF05261DD2AC0E1 /* Pods-RichFlyerApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichFlyerApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-RichFlyerApp/Pods-RichFlyerApp.release.xcconfig"; sourceTree = "<group>"; };
 		B07FBF21D59DFB14798E8FFC /* Pods-NotificationContent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotificationContent.release.xcconfig"; path = "Pods/Target Support Files/Pods-NotificationContent/Pods-NotificationContent.release.xcconfig"; sourceTree = "<group>"; };
 		BCF855B7FF641DE5EA0C344B /* Pods-NotificationService.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotificationService.release.xcconfig"; path = "Pods/Target Support Files/Pods-NotificationService/Pods-NotificationService.release.xcconfig"; sourceTree = "<group>"; };
+		C24C1CEA2B16EC5D0039DE16 /* EventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventViewController.h; sourceTree = "<group>"; };
+		C24C1CEB2B16EC5D0039DE16 /* EventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventViewController.m; sourceTree = "<group>"; };
+		C24C1CEC2B16EC5D0039DE16 /* RecievedNotificationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecievedNotificationCell.h; sourceTree = "<group>"; };
+		C24C1CED2B16EC5D0039DE16 /* RecievedNotificationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecievedNotificationCell.m; sourceTree = "<group>"; };
 		C25E87CE22165DDD00399093 /* RichFlyerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RichFlyerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C25E87D122165DDD00399093 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C25E87D222165DDD00399093 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -83,7 +88,6 @@
 		C281C9E7221C1547003362FE /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
 		C281C9E8221C1547003362FE /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
 		C298C59D221EB48400E1A906 /* RichFlyerApp.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = RichFlyerApp.entitlements; sourceTree = "<group>"; };
-		C298C59E221EB48400E1A906 /* RichFlyer.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RichFlyer.plist; sourceTree = "<group>"; };
 		C298C5A4221EB51C00E1A906 /* NotificationContent.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NotificationContent.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		C298C5A5221EB51C00E1A906 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		C298C5A7221EB51C00E1A906 /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
@@ -173,11 +177,14 @@
 		C25E87D022165DDD00399093 /* RichFlyerApp */ = {
 			isa = PBXGroup;
 			children = (
-				C2CB09222361C71D00D47909 /* RecieveViewController.h */,
-				C2CB09212361C71D00D47909 /* RecieveViewController.m */,
-				C298C59E221EB48400E1A906 /* RichFlyer.plist */,
 				C298C59D221EB48400E1A906 /* RichFlyerApp.entitlements */,
 				C281C9E5221C1547003362FE /* Images.xcassets */,
+				C24C1CEA2B16EC5D0039DE16 /* EventViewController.h */,
+				C24C1CEB2B16EC5D0039DE16 /* EventViewController.m */,
+				C24C1CEC2B16EC5D0039DE16 /* RecievedNotificationCell.h */,
+				C24C1CED2B16EC5D0039DE16 /* RecievedNotificationCell.m */,
+				C2CB09222361C71D00D47909 /* RecieveViewController.h */,
+				C2CB09212361C71D00D47909 /* RecieveViewController.m */,
 				C281C9E4221C1547003362FE /* InputParameterView.h */,
 				C281C9DA221C1546003362FE /* InputParameterView.m */,
 				C281C9E7221C1547003362FE /* Model.h */,
@@ -353,7 +360,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C25E87DE22165DDF00399093 /* LaunchScreen.storyboard in Resources */,
-				C298C59F221EB48400E1A906 /* RichFlyer.plist in Resources */,
 				C281C9EE221C1547003362FE /* Images.xcassets in Resources */,
 				C25E87D922165DDD00399093 /* Main.storyboard in Resources */,
 			);
@@ -471,6 +477,8 @@
 				C25E87D622165DDD00399093 /* ViewController.m in Sources */,
 				C25E87E122165DDF00399093 /* main.m in Sources */,
 				C2CB09232361C71D00D47909 /* RecieveViewController.m in Sources */,
+				C24C1CEF2B16EC5E0039DE16 /* RecievedNotificationCell.m in Sources */,
+				C24C1CEE2B16EC5E0039DE16 /* EventViewController.m in Sources */,
 				C25E87D322165DDD00399093 /* AppDelegate.m in Sources */,
 				C281C9EF221C1547003362FE /* Model.m in Sources */,
 				C281C9E9221C1547003362FE /* InputParameterView.m in Sources */,
@@ -658,7 +666,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = RichFlyerApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -680,7 +688,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = RichFlyerApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -701,7 +709,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = NotificationContent/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -724,7 +732,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = NotificationContent/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -747,7 +755,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = NotificationService/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -770,7 +778,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = NotificationService/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

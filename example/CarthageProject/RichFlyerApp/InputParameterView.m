@@ -19,6 +19,7 @@
 	UITextField* _textField;
 	UIPickerView* _pickerView;
 	UIView* _underBar;
+  UIDatePicker* _datePickerView;
 	
 	NSArray* _list;
 }
@@ -50,27 +51,46 @@
 	_titleLabel.textColor = [UIColor whiteColor];
 	[_contentView addSubview:_titleLabel];
 	
-	_pickerView = [[UIPickerView alloc] init];
-	_pickerView.delegate = self;
-	_pickerView.dataSource = self;
-	_pickerView.showsSelectionIndicator = YES;
 	
 	UIToolbar* toolBar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, 0, 35)];
 	UIBarButtonItem* doneItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(done)];
 	[toolBar setItems:@[doneItem]];
 	
+  BOOL isDate = NO;
+  
 	_textField = [[UITextField alloc] init];
-    if ([_list[0] isKindOfClass:[NSString class]] ) {
-        _textField.text = _list[0];
-    } else if ([_list[0] isKindOfClass:[NSNumber class]]) {
-        _textField.text = [_list[0] stringValue];
+  if ([_list[0] isKindOfClass:[NSString class]] ) {
+      _textField.text = _list[0];
+  } else if ([_list[0] isKindOfClass:[NSNumber class]]) {
+      _textField.text = [_list[0] stringValue];
+  } else if ([_list[0] isKindOfClass:[NSDate class]]) {
+    isDate = YES;
+    NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy/MM/dd"];
+    _textField.text = [formatter stringFromDate:_list[0]];
+  }
+
+  if (isDate) {
+    if (@available(iOS 13.4, *)) {
+      _datePickerView = [[UIDatePicker alloc] init];
+      _datePickerView.preferredDatePickerStyle = UIDatePickerStyleWheels;
+      _datePickerView.datePickerMode = UIDatePickerModeDate;
+      [_datePickerView addTarget:self action:@selector(selectedDate:) forControlEvents:UIControlEventValueChanged];
     }
+  } else {
+    _pickerView = [[UIPickerView alloc] init];
+    _pickerView.delegate = self;
+    _pickerView.dataSource = self;
+    _pickerView.showsSelectionIndicator = YES;
+  }
+
 	_textField.textColor = [UIColor whiteColor];
 	_textField.textAlignment = NSTextAlignmentCenter;
-	_textField.inputView = _pickerView;
+  _textField.inputView = isDate ? _datePickerView : _pickerView;
 	_textField.inputAccessoryView = toolBar;
 	[_contentView addSubview:_textField];
-	
+
+  
 	_underBar = [[UIView alloc] init];
 	_underBar.backgroundColor = [UIColor whiteColor];
 	[_contentView addSubview:_underBar];
@@ -115,6 +135,14 @@
         _textField.text = [_list[row] stringValue];
     }
 	[_model setValue:_type value:_list[row]];
+}
+
+- (void)selectedDate:(UIDatePicker*)sender {
+  NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
+  [formatter setDateFormat:@"yyyy/MM/dd"];
+  _textField.text = [formatter stringFromDate:sender.date];
+  
+  [_model setValue:_type value:sender.date];
 }
 
 @end

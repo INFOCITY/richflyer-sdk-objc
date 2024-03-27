@@ -64,7 +64,9 @@
 	[segmentParameters addObject:[NSNumber numberWithInt:SegmentParameterGenre]];
 	[segmentParameters addObject:[NSNumber numberWithInt:SegmentParameterDay]];
 	[segmentParameters addObject:[NSNumber numberWithInt:SegmentParameterAge]];
-	[segmentParameters addObject:[NSNumber numberWithInt:SegmentParameterRegistered]];
+  [segmentParameters addObject:[NSNumber numberWithInt:SegmentParameterRegistered]];
+  [segmentParameters addObject:[NSNumber numberWithInt:SegmentParameterBirthday]];
+  [segmentParameters addObject:[NSNumber numberWithInt:SegmentParameterInstalledDate]];
 	return segmentParameters;
 	
 }
@@ -79,6 +81,10 @@
 			return @[@0,@10,@20,@30,@40,@50,@60,@70,@80,@90,@100];
 		case SegmentParameterRegistered:
 			return @[@"YES", @"NO"];
+    case SegmentParameterBirthday:
+      return @[[NSDate new]];
+    case SegmentParameterInstalledDate:
+      return @[[NSDate new]];
 	}
 }
 
@@ -92,6 +98,10 @@
 			return @"age";
 		case SegmentParameterRegistered:
 			return @"registered";
+    case SegmentParameterBirthday:
+      return @"birthday";
+    case SegmentParameterInstalledDate:
+      return @"installedDate";
 	}
 }
 

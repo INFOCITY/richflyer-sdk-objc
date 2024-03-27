@@ -17,8 +17,8 @@
 {
   [RFApp resetBadgeNumber:application];
   
-  NSString* bundlPath = [[NSBundle mainBundle] pathForResource:@"RichFlyer" ofType:@"plist"];
-  NSDictionary* rfConf = [NSDictionary dictionaryWithContentsOfFile:bundlPath];
+  NSDictionary* infoPlist = [[NSBundle mainBundle] infoDictionary];
+  NSDictionary* rfConf = infoPlist[@"RichFlyer"];
   NSString* serviceKey = [rfConf objectForKey:@"serviceKey"];
   NSString* groupId = [rfConf objectForKey:@"groupId"];
   
@@ -57,8 +57,8 @@
   NSData* deviceToken = [[NSUserDefaults standardUserDefaults] objectForKey:@"deviceToken"];
 	if (deviceToken) {
 		NSLog(@"token: %@", [[deviceToken description] stringByReplacingOccurrencesOfString:@" " withString:@""]);
-	}
 #endif
+	}
 }
 
 
@@ -117,8 +117,13 @@
 	//Foregroundで通知を受け取る場合の設定
 	//optionsにUNNotificationPresentationOptionNoneを設定すると
 	//Foregroundの際に通知が表示されなくなる
-	UNNotificationPresentationOptions options = UNNotificationPresentationOptionAlert|UNNotificationPresentationOptionBadge|UNNotificationPresentationOptionSound;
-	[RFApp willPresentNotification:options completionHandler:completionHandler];
+  UNNotificationPresentationOptions options = UNNotificationPresentationOptionBadge|UNNotificationPresentationOptionSound;
+  if (@available(iOS 14.0, *)) {
+    options |= (UNNotificationPresentationOptionBanner | UNNotificationPresentationOptionList);
+  } else {
+    options |= UNNotificationPresentationOptionAlert;
+  }
+  [RFApp willPresentNotification:options completionHandler:completionHandler];
 }
 
 - (void)dismissedContentDisplay:(RFAction *)action content:(RFContent*)content

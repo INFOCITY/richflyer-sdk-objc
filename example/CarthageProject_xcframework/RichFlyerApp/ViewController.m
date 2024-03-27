@@ -12,7 +12,7 @@
 #import "ViewController.h"
 
 #define MARGIN 8
-#define ITEM_COUNT 5
+#define ITEM_COUNT 7
 
 @interface ViewController ()
 {
@@ -121,7 +121,7 @@
             if ([value isEqualToString:@"YES"]) {
                 [boolSegments setObject:[NSNumber numberWithBool:YES] forKey:key];
             } else if ([value isEqualToString:@"NO"]) {
-                [boolSegments setObject:[NSNumber numberWithBool:NO] forKey:key];
+              [boolSegments setObject:[NSNumber numberWithBool:NO] forKey:key];
             } else {
                 [stringSegments setObject:value forKey:key];
             }
@@ -130,6 +130,11 @@
         
         if ([value isKindOfClass:[NSNumber class]]) {
             [intSegments setObject:value forKey:key];
+            continue;
+        }
+      
+        if ([value isKindOfClass:[NSDate class]]) {
+            [dateSegments setObject:value forKey:key];
             continue;
         }
     }

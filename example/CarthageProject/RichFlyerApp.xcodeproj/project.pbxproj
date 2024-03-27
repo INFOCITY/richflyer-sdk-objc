@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C24C1CE22B16E2DE0039DE16 /* RecievedNotificationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C24C1CDF2B16E2DE0039DE16 /* RecievedNotificationCell.m */; };
+		C24C1CE32B16E2DE0039DE16 /* EventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C24C1CE02B16E2DE0039DE16 /* EventViewController.m */; };
 		C281CA2D221D00D5003362FE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C281CA2C221D00D5003362FE /* AppDelegate.m */; };
 		C281CA30221D00D5003362FE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C281CA2F221D00D5003362FE /* ViewController.m */; };
 		C281CA33221D00D5003362FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C281CA31221D00D5003362FE /* Main.storyboard */; };
@@ -23,7 +25,6 @@
 		C281CAF1221E3E1F003362FE /* NotificationContent.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C281CAE2221E3E1E003362FE /* NotificationContent.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		C281CAFE221E3E98003362FE /* NotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = C281CAFD221E3E98003362FE /* NotificationService.m */; };
 		C281CB02221E3E98003362FE /* NotificationService.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C281CAFA221E3E97003362FE /* NotificationService.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		C281CB09221E49FA003362FE /* RichFlyer.plist in Resources */ = {isa = PBXBuildFile; fileRef = C281CB08221E49FA003362FE /* RichFlyer.plist */; };
 		C281CB0D221E4CF9003362FE /* RichFlyer.plist in Resources */ = {isa = PBXBuildFile; fileRef = C281CB0C221E4CF9003362FE /* RichFlyer.plist */; };
 		C281CB0E221E613C003362FE /* RichFlyer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C281CA43221D019E003362FE /* RichFlyer.framework */; };
 		C281CB10221E614F003362FE /* RichFlyer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C281CA43221D019E003362FE /* RichFlyer.framework */; };
@@ -63,6 +64,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C24C1CDE2B16E2DE0039DE16 /* RecievedNotificationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecievedNotificationCell.h; sourceTree = "<group>"; };
+		C24C1CDF2B16E2DE0039DE16 /* RecievedNotificationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecievedNotificationCell.m; sourceTree = "<group>"; };
+		C24C1CE02B16E2DE0039DE16 /* EventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventViewController.m; sourceTree = "<group>"; };
+		C24C1CE12B16E2DE0039DE16 /* EventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventViewController.h; sourceTree = "<group>"; };
 		C281CA28221D00D5003362FE /* RichFlyerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RichFlyerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C281CA2B221D00D5003362FE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C281CA2C221D00D5003362FE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -94,7 +99,6 @@
 		C281CAFF221E3E98003362FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C281CB06221E4799003362FE /* NotificationContent.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NotificationContent.entitlements; sourceTree = "<group>"; };
 		C281CB07221E47A8003362FE /* NotificationService.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NotificationService.entitlements; sourceTree = "<group>"; };
-		C281CB08221E49FA003362FE /* RichFlyer.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = RichFlyer.plist; sourceTree = "<group>"; };
 		C281CB0C221E4CF9003362FE /* RichFlyer.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RichFlyer.plist; sourceTree = "<group>"; };
 		C2CB091E2361C29300D47909 /* RecieveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecieveViewController.h; sourceTree = "<group>"; };
 		C2CB091F2361C29300D47909 /* RecieveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecieveViewController.m; sourceTree = "<group>"; };
@@ -154,6 +158,10 @@
 		C281CA2A221D00D5003362FE /* RichFlyerApp */ = {
 			isa = PBXGroup;
 			children = (
+				C24C1CE12B16E2DE0039DE16 /* EventViewController.h */,
+				C24C1CE02B16E2DE0039DE16 /* EventViewController.m */,
+				C24C1CDE2B16E2DE0039DE16 /* RecievedNotificationCell.h */,
+				C24C1CDF2B16E2DE0039DE16 /* RecievedNotificationCell.m */,
 				C2CB091E2361C29300D47909 /* RecieveViewController.h */,
 				C2CB091F2361C29300D47909 /* RecieveViewController.m */,
 				C281CADD221E3DC2003362FE /* RichFlyerApp.entitlements */,
@@ -171,7 +179,6 @@
 				C281CA36221D00D6003362FE /* LaunchScreen.storyboard */,
 				C281CA39221D00D6003362FE /* Info.plist */,
 				C281CA3A221D00D6003362FE /* main.m */,
-				C281CB08221E49FA003362FE /* RichFlyer.plist */,
 			);
 			path = RichFlyerApp;
 			sourceTree = "<group>";
@@ -342,7 +349,6 @@
 			files = (
 				C281CA38221D00D6003362FE /* LaunchScreen.storyboard in Resources */,
 				C281CA5F221D07D1003362FE /* Images.xcassets in Resources */,
-				C281CB09221E49FA003362FE /* RichFlyer.plist in Resources */,
 				C281CA33221D00D5003362FE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -394,10 +400,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C281CA30221D00D5003362FE /* ViewController.m in Sources */,
+				C24C1CE32B16E2DE0039DE16 /* EventViewController.m in Sources */,
 				C281CA3B221D00D6003362FE /* main.m in Sources */,
 				C2CB09202361C29300D47909 /* RecieveViewController.m in Sources */,
 				C281CA2D221D00D5003362FE /* AppDelegate.m in Sources */,
 				C281CA60221D07D1003362FE /* Model.m in Sources */,
+				C24C1CE22B16E2DE0039DE16 /* RecievedNotificationCell.m in Sources */,
 				C281CA5B221D07D1003362FE /* InputParameterView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -602,7 +610,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = RichFlyerApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -627,7 +635,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = RichFlyerApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -651,7 +659,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = NotificationContent/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -677,7 +685,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = NotificationContent/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -703,7 +711,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = NotificationService/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -729,7 +737,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = NotificationService/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

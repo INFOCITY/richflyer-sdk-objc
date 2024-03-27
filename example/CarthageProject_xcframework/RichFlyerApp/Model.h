@@ -11,7 +11,9 @@ typedef enum SegmentParameter {
 	SegmentParameterGenre,
 	SegmentParameterDay,
 	SegmentParameterAge,
-	SegmentParameterRegistered
+	SegmentParameterRegistered,
+  SegmentParameterBirthday,
+  SegmentParameterInstalledDate
 } SegmentParameter;
 
 typedef enum EventParameter {
@@ -33,7 +35,7 @@ typedef enum NotificationParameter {
 
 @interface Model : NSObject
 
-- (void)setValue:(SegmentParameter)key value:(NSString*)value;
+- (void)setValue:(SegmentParameter)key value:(NSObject*)value;
 - (NSString*)getValue;
 - (NSDictionary*)getDictionary;
 
