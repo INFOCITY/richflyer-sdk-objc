@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B1F6C0A2A0D02E6004462FE /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B1F6C092A0D02E6004462FE /* SceneDelegate.m */; };
 		8C6D19C826A133280045719E /* RichFlyer.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C6D19C726A133280045719E /* RichFlyer.xcframework */; };
 		8C6D19C926A133280045719E /* RichFlyer.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C6D19C726A133280045719E /* RichFlyer.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8C6D19CB26A133310045719E /* RichFlyer.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C6D19C726A133280045719E /* RichFlyer.xcframework */; };
@@ -76,6 +77,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9B1F6C082A0D02E6004462FE /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		9B1F6C092A0D02E6004462FE /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		8C6D19C726A133280045719E /* RichFlyer.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:Q8NA27XCC2:INFOCITY,Inc."; lastKnownFileType = wrapper.xcframework; name = RichFlyer.xcframework; path = Carthage/Build/RichFlyer.xcframework; sourceTree = "<group>"; };
 		C24C1CE42B16E8310039DE16 /* EventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventViewController.m; sourceTree = "<group>"; };
 		C24C1CE52B16E8320039DE16 /* RecievedNotificationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecievedNotificationCell.h; sourceTree = "<group>"; };
@@ -185,6 +188,8 @@
 				C281CA51221D07D1003362FE /* Model.m */,
 				C281CA2B221D00D5003362FE /* AppDelegate.h */,
 				C281CA2C221D00D5003362FE /* AppDelegate.m */,
+				9B1F6C082A0D02E6004462FE /* SceneDelegate.h */,
+				9B1F6C092A0D02E6004462FE /* SceneDelegate.m */,
 				C281CA2E221D00D5003362FE /* ViewController.h */,
 				C281CA2F221D00D5003362FE /* ViewController.m */,
 				C281CA31221D00D5003362FE /* Main.storyboard */,
@@ -394,6 +399,7 @@
 				C24C1CE92B16E8320039DE16 /* RecievedNotificationCell.m in Sources */,
 				C24C1CE82B16E8320039DE16 /* EventViewController.m in Sources */,
 				C281CA2D221D00D5003362FE /* AppDelegate.m in Sources */,
+				9B1F6C0A2A0D02E6004462FE /* SceneDelegate.m in Sources */,
 				C281CA60221D07D1003362FE /* Model.m in Sources */,
 				C281CA5B221D07D1003362FE /* InputParameterView.m in Sources */,
 			);

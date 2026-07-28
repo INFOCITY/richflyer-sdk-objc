@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B1F6C0A2A0D02E6004462FE /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B1F6C092A0D02E6004462FE /* SceneDelegate.m */; };
 		C24C1CE22B16E2DE0039DE16 /* RecievedNotificationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C24C1CDF2B16E2DE0039DE16 /* RecievedNotificationCell.m */; };
 		C24C1CE32B16E2DE0039DE16 /* EventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C24C1CE02B16E2DE0039DE16 /* EventViewController.m */; };
 		C281CA2D221D00D5003362FE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C281CA2C221D00D5003362FE /* AppDelegate.m */; };
@@ -64,6 +65,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9B1F6C082A0D02E6004462FE /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		9B1F6C092A0D02E6004462FE /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		C24C1CDE2B16E2DE0039DE16 /* RecievedNotificationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecievedNotificationCell.h; sourceTree = "<group>"; };
 		C24C1CDF2B16E2DE0039DE16 /* RecievedNotificationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecievedNotificationCell.m; sourceTree = "<group>"; };
 		C24C1CE02B16E2DE0039DE16 /* EventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventViewController.m; sourceTree = "<group>"; };
@@ -173,6 +176,8 @@
 				C281CA51221D07D1003362FE /* Model.m */,
 				C281CA2B221D00D5003362FE /* AppDelegate.h */,
 				C281CA2C221D00D5003362FE /* AppDelegate.m */,
+				9B1F6C082A0D02E6004462FE /* SceneDelegate.h */,
+				9B1F6C092A0D02E6004462FE /* SceneDelegate.m */,
 				C281CA2E221D00D5003362FE /* ViewController.h */,
 				C281CA2F221D00D5003362FE /* ViewController.m */,
 				C281CA31221D00D5003362FE /* Main.storyboard */,
@@ -404,6 +409,7 @@
 				C281CA3B221D00D6003362FE /* main.m in Sources */,
 				C2CB09202361C29300D47909 /* RecieveViewController.m in Sources */,
 				C281CA2D221D00D5003362FE /* AppDelegate.m in Sources */,
+				9B1F6C0A2A0D02E6004462FE /* SceneDelegate.m in Sources */,
 				C281CA60221D07D1003362FE /* Model.m in Sources */,
 				C24C1CE22B16E2DE0039DE16 /* RecievedNotificationCell.m in Sources */,
 				C281CA5B221D07D1003362FE /* InputParameterView.m in Sources */,

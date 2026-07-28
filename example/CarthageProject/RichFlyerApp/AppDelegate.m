@@ -40,29 +40,17 @@
 }
 
 
-- (void)applicationWillResignActive:(UIApplication *)application {
-}
-
-
-- (void)applicationDidEnterBackground:(UIApplication *)application {
-}
-
-
-- (void)applicationWillEnterForeground:(UIApplication *)application {
-}
-
-
-- (void)applicationDidBecomeActive:(UIApplication *)application {
-#if DEBUG
-  NSData* deviceToken = [[NSUserDefaults standardUserDefaults] objectForKey:@"deviceToken"];
-	if (deviceToken) {
-		NSLog(@"token: %@", [[deviceToken description] stringByReplacingOccurrencesOfString:@" " withString:@""]);
-#endif
-	}
-}
-
-
 - (void)applicationWillTerminate:(UIApplication *)application {
+}
+
+#pragma mark - UISceneSession lifecycle
+
+- (UISceneConfiguration *)application:(UIApplication *)application configurationForConnectingSceneSession:(UISceneSession *)connectingSceneSession options:(UISceneConnectionOptions *)options {
+	return [[UISceneConfiguration alloc] initWithName:@"Default Configuration" sessionRole:connectingSceneSession.role];
+}
+
+
+- (void)application:(UIApplication *)application didDiscardSceneSessions:(NSSet<UISceneSession *> *)sceneSessions {
 }
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
